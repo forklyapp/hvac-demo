@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summit Heating &amp; Air — HVAC in Davis County, Utah</title>
+<meta name="description" content="Davis County heating and air conditioning. Furnace and AC repair, replacement, and 24/7 emergency service. Get a quote in 60 seconds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --steel:#1C2530;
+  --denim:#2B3A4A;
+  --flame:#FF6B35;
+  --flame-dark:#E8551F;
+  --frost:#35B6E8;
+  --frost-dark:#1E9CCD;
+  --day:#F3F6F8;
+  --line:#D5DDE3;
+  --ink:#1C2530;
+  --muted:#5B6976;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--day);line-height:1.6;font-size:16px}
+h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:1.05rem;padding:14px 28px;border-radius:6px;text-decoration:none;border:none;cursor:pointer;transition:transform .12s ease,background .12s ease}
+.btn:active{transform:scale(.97)}
+.btn-flame{background:var(--flame);color:#fff}
+.btn-flame:hover{background:var(--flame-dark)}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.btn-ghost:hover{border-color:#fff}
+.btn:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--frost);outline-offset:2px}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--steel);color:#fff;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,var(--flame) 0%,var(--flame) 50%,var(--frost) 50%,var(--frost) 100%) 1}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.4rem;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo svg{flex:none}
+.topnav{display:flex;gap:26px;align-items:center}
+.topnav a{text-decoration:none;font-weight:600;font-size:.95rem;opacity:.9}
+.topnav a:hover{opacity:1;color:var(--frost)}
+.call-link{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;color:var(--flame)!important;opacity:1!important;text-decoration:none}
+@media(max-width:760px){.topnav a:not(.call-link){display:none}}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--steel) 0%,var(--denim) 100%);color:#fff;position:relative;padding:84px 0 140px;overflow:hidden}
+.hero .wrap{position:relative;z-index:2}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:1rem;margin-bottom:14px}
+.eyebrow .hot{color:var(--flame)}
+.eyebrow .cold{color:var(--frost)}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;max-width:14ch}
+.hero h1 .hot{color:var(--flame)}
+.hero h1 .cold{color:var(--frost)}
+.hero p{margin:20px 0 30px;font-size:1.15rem;max-width:48ch;color:#D3DAE1}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+/* thermal gradient edge */
+.thermal{position:absolute;right:0;top:0;bottom:0;width:10px;background:linear-gradient(180deg,var(--flame),var(--frost));opacity:.85;z-index:1}
+@media(max-width:760px){.hero{padding:56px 0 120px}}
+/* airflow wave divider */
+.airflow{display:block;width:100%;height:70px;margin-top:-70px;position:relative;z-index:3}
+
+/* trust strip */
+.trust{background:var(--day);padding:34px 0 10px}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+.trust .t{border-top:3px solid var(--flame);padding-top:12px}
+.trust .t:nth-child(even){border-top-color:var(--frost)}
+.trust .num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2.1rem;line-height:1}
+.trust .lab{font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+@media(max-width:760px){.trust .wrap{grid-template-columns:repeat(2,1fr)}}
+
+section{padding:72px 0}
+.sec-head{margin-bottom:40px;max-width:60ch}
+.sec-head h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:800}
+.sec-head p{color:var(--muted);margin-top:10px;font-size:1.05rem}
+
+/* services */
+.services{background:#fff}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.svc{background:var(--day);border:1px solid var(--line);border-radius:8px;padding:26px 22px;position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--steel)}
+.svc.hot:hover::before{background:var(--flame)}
+.svc.cold:hover::before{background:var(--frost)}
+.svc h3{font-size:1.35rem;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:.97rem}
+.svc .ico{width:44px;height:44px;margin-bottom:14px}
+.svc.hot .ico{color:var(--flame)}
+.svc.cold .ico{color:var(--frost-dark)}
+
+/* emergency band */
+.emergency{background:var(--flame);color:#fff;padding:26px 0}
+.emergency .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.emergency strong{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:1.5rem;letter-spacing:.03em}
+.emergency p{font-size:1rem;opacity:.95}
+.emergency a{background:#fff;color:var(--flame-dark);font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:12px 24px;border-radius:6px;text-decoration:none;font-size:1.1rem;white-space:nowrap}
+
+/* gallery */
+.gallery{background:var(--steel);color:#fff}
+.gallery .sec-head p{color:#B6C0CA}
+.g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.g-card{border-radius:8px;overflow:hidden;background:var(--denim)}
+.g-img{height:200px;display:flex;align-items:flex-end;padding:14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.95rem}
+.g-img.before{background:repeating-linear-gradient(90deg,#42505e 0 16px,#3a4856 16px 32px)}
+.g-img.hotjob{background:repeating-linear-gradient(90deg,#2a3744 0 16px,#243744 16px 32px),linear-gradient(180deg,rgba(255,107,53,.25),transparent)}
+.g-img.coldjob{background:repeating-linear-gradient(90deg,#2a3744 0 16px,#243744 16px 32px),linear-gradient(180deg,rgba(53,182,232,.25),transparent)}
+.g-tag{background:rgba(0,0,0,.55);padding:4px 10px;border-radius:4px}
+.g-card .cap{padding:14px 16px;font-size:.92rem;color:#C4CDD6}
+.g-note{margin-top:18px;font-size:.85rem;color:#8794A1}
+
+/* areas */
+.areas{background:#fff}
+.area-tags{display:flex;flex-wrap:wrap;gap:10px}
+.area-tags span{background:var(--day);border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-weight:600;font-size:.95rem}
+
+/* reviews */
+.reviews{background:var(--day)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px}
+.stars{color:var(--flame);letter-spacing:2px;margin-bottom:10px}
+.rev p{font-size:.97rem}
+.rev .who{margin-top:14px;font-weight:600;font-size:.9rem;color:var(--muted)}
+
+/* quote chat */
+.quote{background:linear-gradient(160deg,var(--denim),var(--steel));color:#fff}
+.quote .sec-head p{color:#C0C9D2}
+.q-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
+@media(max-width:860px){.q-layout{grid-template-columns:1fr}}
+.q-points{list-style:none;display:grid;gap:16px}
+.q-points li{display:flex;gap:12px;align-items:flex-start;font-size:1.02rem;color:#D3DAE1}
+.q-points .dot{flex:none;width:26px;height:26px;border-radius:50%;background:var(--frost);color:var(--steel);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;margin-top:2px}
+.chat{background:#fff;color:var(--ink);border-radius:12px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.chat-head{background:var(--steel);color:#fff;padding:14px 18px;display:flex;align-items:center;gap:10px}
+.chat-head .pulse{width:9px;height:9px;border-radius:50%;background:#3ED66B;box-shadow:0 0 0 0 rgba(62,214,107,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(62,214,107,.5)}70%{box-shadow:0 0 0 9px rgba(62,214,107,0)}100%{box-shadow:0 0 0 0 rgba(62,214,107,0)}}
+.chat-head strong{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:1.05rem}
+.chat-body{height:380px;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:12px;background:#EFF3F5}
+.msg{max-width:82%;padding:11px 15px;border-radius:12px;font-size:.96rem;line-height:1.45}
+.msg.bot{background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px;align-self:flex-start}
+.msg.user{background:var(--frost);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.msg.urgent{background:#FFEDE5;border:1.5px solid var(--flame);color:var(--flame-dark);max-width:100%;border-radius:8px;font-weight:500}
+.msg.summary{background:var(--steel);color:#fff;max-width:100%;border-radius:8px}
+.msg.summary h4{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--frost);margin-bottom:8px;font-size:1.05rem}
+.msg.summary ul{list-style:none;font-size:.92rem;display:grid;gap:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-self:flex-start}
+.chip{background:#fff;border:1.5px solid var(--frost-dark);color:var(--frost-dark);border-radius:999px;padding:8px 16px;font-weight:600;font-size:.92rem;cursor:pointer;transition:background .12s,color .12s}
+.chip:hover{background:var(--frost);color:#fff}
+.chat-input{display:flex;border-top:1px solid var(--line);background:#fff}
+.chat-input input{flex:1;border:none;padding:15px 16px;font-size:1rem;font-family:'Barlow',sans-serif;background:transparent}
+.chat-input button{border:none;background:var(--frost);color:#fff;padding:0 22px;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:1rem;cursor:pointer}
+.chat-input button:hover{background:var(--frost-dark)}
+.typing{display:inline-flex;gap:4px;padding:13px 16px;background:#fff;border:1px solid var(--line);border-radius:12px;border-bottom-left-radius:4px;align-self:flex-start}
+.typing i{width:7px;height:7px;border-radius:50%;background:#9FACB8;animation:blink 1.2s infinite}
+.typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,80%,100%{opacity:.3}40%{opacity:1}}
+
+/* footer */
+footer{background:var(--steel);color:#ABB6C1;padding:48px 0 100px;font-size:.92rem}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+@media(max-width:760px){footer .wrap{grid-template-columns:1fr}}
+footer h4{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;color:#fff;margin-bottom:12px;letter-spacing:.05em}
+footer a{text-decoration:none}
+footer a:hover{color:var(--frost)}
+footer ul{list-style:none;display:grid;gap:8px}
+.lic{margin-top:14px;font-size:.82rem;color:#7B8794}
+
+/* sticky mobile call bar */
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--flame);color:#fff;text-align:center;padding:15px;font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:1.2rem;letter-spacing:.05em;text-decoration:none;box-shadow:0 -4px 16px rgba(0,0,0,.25)}
+@media(max-width:760px){.callbar{display:block}}
+</style>
+</head>
+<body>
+
+<nav class="topbar" aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Summit Heating and Air home">
+      <svg width="30" height="24" viewBox="0 0 30 24" fill="none" aria-hidden="true"><path d="M2 18 L10 8 L15 13 L22 4 L28 11" stroke="#FF6B35" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 21 H26" stroke="#35B6E8" stroke-width="3" stroke-linecap="round"/></svg>
+      Summit Heating &amp; Air
+    </a>
+    <div class="topnav">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#areas">Service Area</a>
+      <a href="#quote">Get a Quote</a>
+      <a class="call-link" href="tel:8015550192">(801) 555-0192</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="thermal" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="hot">Heating</span> · <span class="cold">Cooling</span> · Davis County, Utah</div>
+    <h1><span class="hot">Warm in January.</span><br><span class="cold">Cool in July.</span></h1>
+    <p>Furnace and AC repair, replacement, and tune-ups across the north Wasatch Front. Licensed techs, upfront pricing, and a real human on the phone — 24/7 when your system quits.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-flame" href="#quote">Get a quote in 60 seconds</a>
+      <a class="btn btn-ghost" href="tel:8015550192">Call (801) 555-0192</a>
+    </div>
+  </div>
+</header>
+<svg class="airflow" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M0,10 L0,6 Q12.5,1 25,6 T50,6 T75,6 T100,6 L100,10 Z" fill="#F3F6F8"/></svg>
+
+<div class="trust" aria-label="Company stats">
+  <div class="wrap">
+    <div class="t"><div class="num">16</div><div class="lab">Years in the trade</div></div>
+    <div class="t"><div class="num">2,400+</div><div class="lab">Systems serviced</div></div>
+    <div class="t"><div class="num">24/7</div><div class="lab">Emergency line</div></div>
+    <div class="t"><div class="num">Same day</div><div class="lab">Service calls</div></div>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What we do</h2>
+      <p>Residential heating and cooling, repair to full replacement. The tech who quotes your system is the one who installs it.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc hot">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3 C9 8 7 10 7 14 a5 5 0 0 0 10 0 c0-4-2-6-5-11Z" stroke-linejoin="round"/></svg>
+        <h3>Furnace Repair &amp; Install</h3>
+        <p>No heat at 2am in January is an emergency, and we treat it like one. Repairs on every major brand, high-efficiency replacements quoted flat.</p>
+      </div>
+      <div class="svc cold">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 V22 M4 7 L20 17 M20 7 L4 17" stroke-linecap="round"/></svg>
+        <h3>AC Repair &amp; Install</h3>
+        <p>Diagnostics, refrigerant, capacitors, full condenser swaps. Sized right for your square footage — not just whatever's on the truck.</p>
+      </div>
+      <div class="svc cold">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2 v4 M12 18 v4 M2 12 h4 M18 12 h4" stroke-linecap="round"/></svg>
+        <h3>Heat Pumps &amp; Mini-Splits</h3>
+        <p>One system for both seasons. Ductless options for basements, garages, and additions — plus current rebate paperwork handled for you.</p>
+      </div>
+      <div class="svc hot">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12 a7 7 0 0 1 14 0 M5 12 v6 M19 12 v6" stroke-linecap="round"/><path d="M9 18 h6" stroke-linecap="round"/></svg>
+        <h3>Tune-Ups &amp; Maintenance</h3>
+        <p>Seasonal furnace and AC tune-ups that catch the $80 part before it becomes the $8,000 system. Maintenance plans available.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="emergency">
+  <div class="wrap">
+    <div>
+      <strong>System down right now?</strong>
+      <p>Nights, weekends, holidays — the emergency line is answered by a tech, not a machine.</p>
+    </div>
+    <a href="tel:8015550192">Call the 24/7 line</a>
+  </div>
+</div>
+
+<section class="gallery" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Recent work</h2>
+      <p>Every install photographed and registered for warranty. You get the model numbers, serials, and permit docs in one folder.</p>
+    </div>
+    <div class="g-grid">
+      <div class="g-card">
+        <div class="g-img before"><span class="g-tag">Before — 1997 furnace</span></div>
+        <div class="cap">Layton · 26-year-old 80% furnace, cracked heat exchanger found during tune-up</div>
+      </div>
+      <div class="g-card">
+        <div class="g-img hotjob"><span class="g-tag">After — 96% two-stage</span></div>
+        <div class="cap">Same home · high-efficiency furnace installed next day · gas bill down ~30% that winter</div>
+      </div>
+      <div class="g-card">
+        <div class="g-img coldjob"><span class="g-tag">After — full AC swap</span></div>
+        <div class="cap">Syracuse · 4-ton condenser + coil replaced in one visit · permit pulled, inspection passed</div>
+      </div>
+    </div>
+    <p class="g-note">Demo note: placeholder graphics shown — your real install photos go here.</p>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Where we work</h2>
+      <p>Based in Clearfield. Trucks dispatched across Davis and southern Weber County every day.</p>
+    </div>
+    <div class="area-tags">
+      <span>Clearfield</span><span>Layton</span><span>Syracuse</span><span>Kaysville</span><span>Farmington</span><span>Clinton</span><span>Roy</span><span>West Point</span><span>Ogden</span><span>Bountiful</span>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What homeowners say</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rev">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>"Furnace died on a Sunday night in December. Tech was here by 8am Monday with the part already on the truck. Heat by 9:30."</p>
+        <div class="who">J. Sorensen · Kaysville</div>
+      </div>
+      <div class="rev">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>"Two other companies quoted us a full AC replacement. Summit found a bad capacitor and charged us a service call. We'll never use anyone else."</p>
+        <div class="who">A. Pratt · Layton</div>
+      </div>
+      <div class="rev">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>"Quote matched the invoice to the dollar. New heat pump runs quieter than our old fridge and they handled all the rebate paperwork."</p>
+        <div class="who">C. Madsen · Farmington</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Get a quote in 60 seconds</h2>
+      <p>Answer a few questions and we'll text you a ballpark today. If your system is down right now, the chat will point you straight to the emergency line.</p>
+    </div>
+    <div class="q-layout">
+      <ul class="q-points">
+        <li><span class="dot">1</span><span><strong>Tell us what's going on.</strong> Our smart intake asks what our dispatcher would — heating or cooling, system age, and how urgent it is.</span></li>
+        <li><span class="dot">2</span><span><strong>Get a ballpark fast.</strong> Repairs and replacements quoted in ranges up front, so there's no sticker shock at the door.</span></li>
+        <li><span class="dot">3</span><span><strong>Same-day service.</strong> Most calls scheduled same or next day. Emergencies jump the line — that's what the 24/7 number is for.</span></li>
+      </ul>
+      <div class="chat" aria-label="Quote request chat">
+        <div class="chat-head"><span class="pulse" aria-hidden="true"></span><strong>Quote Assistant</strong><span style="margin-left:auto;font-size:.8rem;opacity:.7">replies instantly</span></div>
+        <div class="chat-body" id="chatBody" aria-live="polite"></div>
+        <div class="chat-input">
+          <input type="text" id="chatInput" placeholder="Type your answer…" aria-label="Your answer" autocomplete="off">
+          <button id="chatSend" type="button">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>Summit Heating &amp; Air</h4>
+      <p>Heating and cooling for Davis and Weber County. Upfront pricing, licensed techs, and a 24/7 emergency line that gets answered.</p>
+      <p class="lic">UT Contractor License #0000000-5503 · Fully insured · Demo site — not a real business</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:8015550192">(801) 555-0192</a></li>
+        <li><a href="mailto:service@summitheatandair.com">service@summitheatandair.com</a></li>
+        <li>Clearfield, Utah</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <ul>
+        <li>Mon–Fri · 7am–6pm</li>
+        <li>Sat · 8am–2pm</li>
+        <li>24/7 emergency dispatch</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:8015550192">📞 Tap to call — (801) 555-0192</a>
+
+<script>
+(function(){
+  const body = document.getElementById('chatBody');
+  const input = document.getElementById('chatInput');
+  const send = document.getElementById('chatSend');
+  const state = { step:0, answers:{} };
+
+  // Scripted intake flow. In the production version this is replaced by a
+  // serverless endpoint calling the Claude API, so follow-ups adapt to any answer.
+  const flow = [
+    { key:'need',   q:"Hi! I can get you a ballpark in about a minute. What's going on?", chips:["No heat / no AC right now","Repair — something's off","Replace an old system","Tune-up / maintenance","New install (addition, basement)"] },
+    { key:'system', q:"Got it. What kind of system is it?", chips:["Gas furnace","Central AC","Furnace + AC combo","Heat pump / mini-split","Not sure"] },
+    { key:'age',    q:"Roughly how old is the system?", chips:["Under 10 years","10–15 years","15+ years","No idea"] },
+    { key:'timing', q:"When do you want someone out?", chips:["Today if possible","This week","This month","Just budgeting"] },
+    { key:'name',   q:"Almost done. What's your name?", chips:null },
+    { key:'phone',  q:"And the best number to text your ballpark to?", chips:null }
+  ];
+
+  function el(cls, html){ const d=document.createElement('div'); d.className=cls; d.innerHTML=html; return d; }
+  function scroll(){ body.scrollTop = body.scrollHeight; }
+
+  function botSay(html, then){
+    const t = el('typing','<i></i><i></i><i></i>');
+    body.appendChild(t); scroll();
+    setTimeout(()=>{ t.remove(); body.appendChild(el('msg bot', html)); scroll(); if(then) then(); }, 650);
+  }
+
+  function showChips(options){
+    const c = document.createElement('div'); c.className='chips';
+    options.forEach(o=>{
+      const b=document.createElement('button'); b.type='button'; b.className='chip'; b.textContent=o;
+      b.onclick=()=>{ c.remove(); userSay(o); };
+      c.appendChild(b);
+    });
+    body.appendChild(c); scroll();
+  }
+
+  function ask(){
+    const step = flow[state.step];
+    botSay(step.q, ()=>{ if(step.chips) showChips(step.chips); else input.focus(); });
+  }
+
+  function userSay(text){
+    if(!text.trim()) return;
+    body.appendChild(el('msg user', escapeHtml(text))); scroll();
+    state.answers[flow[state.step].key]=text.trim();
+
+    // Emergency branch: system down now -> surface the 24/7 line immediately, then continue intake
+    if(state.step===0 && /no heat|no ac/i.test(text)){
+      body.appendChild(el('msg urgent','🔥 That counts as an emergency — you can skip the form and call the 24/7 line right now: <a href="tel:8015550192"><strong>(801) 555-0192</strong></a>. Or keep going and we\'ll dispatch from your answers.'));
+      scroll();
+    }
+
+    state.step++;
+    if(state.step < flow.length){ ask(); } else { finish(); }
+  }
+
+  function finish(){
+    const a = state.answers;
+    botSay("Perfect — that's everything. Here's what we'll send to dispatch:", ()=>{
+      const s = el('msg summary',
+        '<h4>Lead Summary · sent to dispatch</h4><ul>'+
+        '<li><strong>Issue:</strong> '+escapeHtml(a.need)+'</li>'+
+        '<li><strong>System:</strong> '+escapeHtml(a.system)+'</li>'+
+        '<li><strong>Age:</strong> '+escapeHtml(a.age)+'</li>'+
+        '<li><strong>Timing:</strong> '+escapeHtml(a.timing)+'</li>'+
+        '<li><strong>Contact:</strong> '+escapeHtml(a.name)+' · '+escapeHtml(a.phone)+'</li></ul>');
+      body.appendChild(s); scroll();
+      botSay("Thanks, "+escapeHtml(a.name.split(' ')[0])+"! You'll get a text with your ballpark today. If it can't wait, the 24/7 line is <a href='tel:8015550192'><strong>(801) 555-0192</strong></a>.");
+    });
+  }
+
+  function escapeHtml(s){ return s.replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+  send.addEventListener('click', ()=>{ userSay(input.value); input.value=''; });
+  input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ userSay(input.value); input.value=''; } });
+
+  ask();
+})();
+</script>
+</body>
+</html>
